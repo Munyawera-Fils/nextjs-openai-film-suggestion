@@ -41,3 +41,20 @@ body {
   margin-top: 1rem;
   padding: 0.5rem;
 }
+
+/* Style the dropdown select options */
+.select-dropdown option {
+  /* Custom styles */
+  background-color: #f7f7f7;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  border: 1px solid #ccc;
+}
+
+/* Style the selected option */
+.select-dropdown option:checked {
+  /* Custom styles for the selected option */
+  background-color: #0070f3;
+  color: #fff;
+}

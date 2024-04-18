@@ -1,36 +1,40 @@
-// file: /prompts/promptUtils.js
+// File: /prompts/promptUtils.js
+
 export function getSystemPrompt() {
   return {
     role: "system",
-    content: "You are a helpful assistant that specializes in generating creative pet names.",
+    content: "You are a film recommendation assistant. Please input a film you enjoyed.",
   };
 }
 
 export function getUserPrompt(input) {
   return {
     role: "user",
-    content: `Generate a creative pet name and short description for a ${input}.`,
+    content: "Please input a film you enjoyed.",
   };
 }
 
 export function getFunctions() {
   return [
     {
-      name: "generate_pet_name",
-      description: "Generate a pet name for an animal.",
+      name: "suggest_similar_films",
+      description: "Suggest similar films based on a user's input.",
       parameters: {
         type: "object",
         properties: {
-          animalPetName: {
+          userInput: {
             type: "string",
-            description: "The generated pet name for the animal",
+            description: "The film the user enjoyed",
           },
-          description: {
-            type: "string",
-            description: "The generated explanation of the pet name",
+          suggestedFilms: {
+            type: "array",
+            description: "An array of suggested films similar to the user's input",
+            items: {
+              type: "string",
+            },
           },
         },
-        "required": ["animalPetName", "description"]
+        required: ["userInput", "suggestedFilms"],
       },
     },
   ];
