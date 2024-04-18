@@ -29,9 +29,9 @@ Ensure the following are installed on your machine:
 
     `yarn install`
 
-4.  Create a `.env.local` file in the root directory of the project and include your OpenAI API key:
+4.  update a `.env` file in the root directory of the project and include your OpenAI API key:
 
-    `OPENAI_API_KEY=your_openai_api_key`
+    `OPENAI_API_KEY=your_openai_api_key`    here will find the sample API key remove it and update it with your OPEN API Key
 
     Substitute `your_openai_api_key` with your actual OpenAI API key. Your API key can be located in your [OpenAI Dashboard](https://platform.openai.com/account/api-keys).
 
