@@ -1,6 +1,6 @@
-# Next.js OpenAI Film Suggestions
+# Next.js OpenAI FilmInsight
 
-This is Our AI film suggestion project utilizes cutting-edge natural language processing techniques to provide personalized film recommendations based on user input. By leveraging the power of OpenAI's GPT-3.5 model, users can input a film they enjoyed, and our system generates similar film suggestions tailored to their preferences. The project integrates seamlessly with a user-friendly web interface, allowing users to easily input their preferences and receive instant recommendations. With its intelligent algorithm and intuitive design, our AI film suggestion project aims to enhance the movie-watching experience by helping users discover new films they'll love.
+Our AI-powered film recommendation system empowers users to make informed decisions about their movie choices effortlessly. With the help of advanced natural language processing techniques and OpenAI's GPT-3.5 model, users simply input the title of a film they're considering watching, and our system provides a concise yet comprehensive description of the movie. This description serves as a valuable resource for users to gauge whether the film aligns with their preferences, interests, and viewing mood. Our intuitive web interface ensures a seamless experience, allowing users to access film descriptions quickly and efficiently. By offering personalized insights into each film, our AI film suggestion project revolutionizes the way users discover and explore movies, enriching their cinematic journey with tailored recommendations.
 
 ## Getting Started
 
@@ -43,4 +43,4 @@ Ensure the following are installed on your machine:
 
     `yarn dev`
 
-6.  Access the application by navigating to [http://localhost:3000](http://localhost:3000/). The film suggestions AI  application should be live now.
+6.  Access the application by navigating to [http://localhost:3000](http://localhost:3000/). The FilmInsight AI  application should be live now.
