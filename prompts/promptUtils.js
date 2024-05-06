@@ -1,40 +1,36 @@
 // File: /prompts/promptUtils.js
-
 export function getSystemPrompt() {
   return {
     role: "system",
-    content: "You are a film recommendation assistant. Please input a film you enjoyed.",
+    content: "You are a helpful assistant that specializes in generating film suggestions.",
   };
 }
 
 export function getUserPrompt(input) {
   return {
     role: "user",
-    content: "Please input a film you enjoyed.",
+    content: `Generate a film suggestion related to "${input}".`,
   };
 }
 
 export function getFunctions() {
   return [
     {
-      name: "suggest_similar_films",
-      description: "Suggest similar films based on a user's input.",
+      name: "generate_film_suggestion",
+      description: "Generate a film suggestion based on user input.",
       parameters: {
         type: "object",
         properties: {
-          userInput: {
+          filmTitle: {
             type: "string",
-            description: "The film the user enjoyed",
+            description: "The suggested film title.",
           },
-          suggestedFilms: {
-            type: "array",
-            description: "An array of suggested films similar to the user's input",
-            items: {
-              type: "string",
-            },
+          description: {
+            type: "string",
+            description: "A brief description of the suggested film.",
           },
         },
-        required: ["userInput", "suggestedFilms"],
+        required: ["filmTitle", "description"]
       },
     },
   ];
