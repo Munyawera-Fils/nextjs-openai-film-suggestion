@@ -1,4 +1,4 @@
-// File: /components/ResponseDisplay.js
+// file: /components/ResponseDisplay.js
 const ResponseDisplay = ({ data, error, loading }) => {
   let content;
 
@@ -6,17 +6,13 @@ const ResponseDisplay = ({ data, error, loading }) => {
     content = "Loading...";
   } else if (error) {
     content = `Error: ${error.message}`;
-  } else if (data && data.result) {
+  } else if (data) {
     console.log("Data from OpenAI API in display: ", data.result);
 
     content = (
       <>
-        <h3>Similar Films:</h3>
-        <ul>
-          {data.result.suggestedFilms.map((film, index) => (
-            <li key={index}>{film}</li>
-          ))}
-        </ul>
+     
+        <p><b>Description of this film</b>: {data.result.description}</p>
       </>
     );
   } else {
